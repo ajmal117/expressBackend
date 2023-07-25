@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>weather App</title>
+  <style>
+    body {
+      background-color: rgba(1, 1, 3, 0.87);
+    }
+
+    .main {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      /* border: 1px solid red; */
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgb(218, 190, 190);
+      padding: 10px;
+      background-color: rgb(69, 97, 88);
+      color: rgb(219, 218, 218);
+      font-size: larger;
+      letter-spacing: 1.5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    .temp {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .medContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .crrTemp {
+      font-size: 30px;
+      font-weight: 600;
+      color: bisque;
+    }
+  </style>
+  <link rel="stylesheet" href="../../public/header.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="container">
+
+      {{>header}}
+      <div>
+        <p>{{name}}</p>
+      </div>
+      <div>
+        <p>{%cityName%}</p>
+      </div>
+      <div class="medContainer">
+        <div class="content">
+          <label for="">Current Temperature :</label>
+          <p class="crrTemp">{%currentTemp%} &#8451;</p>
+        </div>
+
+        <div class="content">
+          <label for="">Min Temperature :</label>
+          <p>{%minTemp%} &#8451;</p>
+        </div>
+        <div class="content">
+          <label for="">Max Temperature :</label>
+          <p>{%maxTemp%} &#8451;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
